@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/first"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/first"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Weather">
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".SecondActivity" />
+        <activity android:name=".ThirdActivity" />
+        <activity android:name=".FourthActivity" />
+        <activity android:name=".FifthActivity" />
+        <activity android:name=".SixthActivity" />
+        <activity android:name=".SeventhActivity" />
+        <activity android:name=".EighthActivity" />
+        <activity android:name=".NinthActivity" />
+        <activity android:name=".TenthActivity" />
+        <activity android:name=".EditLocationActivity" />
+        <activity android:name=".ChennaiActivity" />
+        <activity android:name=".DelhiActivity" />
+        <activity android:name=".FeedbackActivity" />
+        <activity android:name=".NotificationsActivity" />
+        <activity android:name=".RateActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".ShareActivity" />
+        <activity android:name=".NotificationActivity" />
+        <activity android:name=".AdminActivity" />
+    </application>
+
+</manifest>
