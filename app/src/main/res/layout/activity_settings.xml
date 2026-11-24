@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1D2129"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@+id/btn_close_settings"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:layout_alignParentEnd="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Close"
+            app:tint="@color/white"/>
+    </RelativeLayout>
+
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/et_search_settings"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Search settings..."
+        android:textColorHint="#777E90"
+        android:textColor="@color/white"
+        android:paddingHorizontal="15dp"
+        android:background="@drawable/dashboard_item_bg"
+        android:inputType="text"
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:drawablePadding="10dp"
+        android:layout_marginBottom="20dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/settings_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Weather Settings -->
+            <TextView
+                android:id="@+id/tv_header_weather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weather Settings"
+                android:textColor="#777E90"
+                android:textSize="14sp"
+                android:layout_marginBottom="10dp"/>
+
+            <RelativeLayout
+                android:id="@+id/setting_temp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dashboard_item_bg"
+                android:padding="15dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:focusable="true">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Use Celsius (°C)" android:textColor="@color/white" android:textSize="16sp"/>
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    app:thumbTint="@color/white"
+                    app:trackTint="#4E91F2"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/setting_wind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dashboard_item_bg"
+                android:padding="15dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:focusable="true">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wind Speed in km/h" android:textColor="@color/white" android:textSize="16sp"/>
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_wind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    app:thumbTint="@color/white"
+                    app:trackTint="#4E91F2"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/setting_precip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dashboard_item_bg"
+                android:padding="15dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:focusable="true">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Show Precipitation" android:textColor="@color/white" android:textSize="16sp"/>
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_precip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    app:thumbTint="@color/white"
+                    app:trackTint="#4E91F2"/>
+            </RelativeLayout>
+
+            <!-- App Settings -->
+            <TextView
+                android:id="@+id/tv_header_app"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="App Settings"
+                android:textColor="#777E90"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <RelativeLayout
+                android:id="@+id/setting_theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dashboard_item_bg"
+                android:padding="15dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:focusable="true">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dark Mode" android:textColor="@color/white" android:textSize="16sp"/>
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_theme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    app:thumbTint="@color/white"
+                    app:trackTint="#4E91F2"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/setting_notif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dashboard_item_bg"
+                android:padding="15dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:focusable="true">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Weather Notifications" android:textColor="@color/white" android:textSize="16sp"/>
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_notif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    app:thumbTint="@color/white"
+                    app:trackTint="#4E91F2"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/setting_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dashboard_item_bg"
+                android:padding="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:focusable="true">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="About App" android:textColor="@color/white" android:textSize="16sp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="v1.0.4" android:textColor="#777E90" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/setting_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dashboard_item_bg"
+                android:padding="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="50dp"
+                android:clickable="true"
+                android:focusable="true">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Logout" android:textColor="#FF4D4D" android:textSize="16sp" android:textStyle="bold"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
