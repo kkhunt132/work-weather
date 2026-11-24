@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Page 1 Colors -->
+    <color name="page1_bg">#F0F4F7</color>
+    <color name="text_dark">#1D2433</color>
+    <color name="text_gray">#9A9EAB</color>
+
+    <!-- Page 2 Colors -->
+    <color name="page2_bg">#353945</color>
+</resources>
