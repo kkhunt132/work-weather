@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#353945"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+        <!-- Custom 3-Line Menu Icon -->
+        <LinearLayout
+            android:id="@+id/btn_menu_p7"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+            <View
+                android:layout_width="20dp"
+                android:layout_height="2dp"
+                android:background="@color/white"/>
+            <View
+                android:layout_width="20dp"
+                android:layout_height="2dp"
+                android:background="@color/white"
+                android:layout_marginTop="4dp"/>
+            <View
+                android:layout_width="20dp"
+                android:layout_height="2dp"
+                android:background="@color/white"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_location_p7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" android:text="Chennai, Tamil Nadu" android:textColor="@color/white" android:textSize="18sp" android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tv_skip_p7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="Skip"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:clickable="false"
+            android:focusable="false"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_marginTop="10dp">
+        <TextView android:id="@+id/tab_today_p7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Today" android:textColor="#8E94A3" android:textSize="18sp" android:layout_marginEnd="30dp" />
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginEnd="30dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Forecast" android:textColor="@color/white" android:textSize="18sp" android:textStyle="bold"/>
+            <View android:layout_width="match_parent" android:layout_height="2dp" android:background="@color/white" android:layout_marginTop="4dp"/>
+        </LinearLayout>
+        <TextView android:id="@+id/tab_precipitation_p7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Precipitation" android:textColor="#8E94A3" android:textSize="18sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tv_average_p7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Average: 28%"
+                android:textColor="@color/white"
+                android:layout_marginTop="30dp"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/graph_container_p7"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/dashboard_item_bg"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <!-- Day 1 -->
+                <LinearLayout android:id="@+id/day1_container_p7" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center|bottom" android:clickable="true" android:focusable="true">
+                    <TextView android:id="@+id/tv_day1_temp_p7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="30°" android:textColor="#FFFFFF" android:textSize="10sp" android:layout_marginBottom="2dp"/>
+                    <TextView android:id="@+id/tv_day1_name_p7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SUN" android:textColor="#8E94A3" android:textSize="10sp" android:layout_marginBottom="5dp"/>
+                    <View android:id="@+id/bar1_p7" android:layout_width="20dp" android:layout_height="80dp" android:background="#8E94A3" />
+                </LinearLayout>
+                <!-- Day 2 -->
+                <LinearLayout android:id="@+id/day2_container_p7" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center|bottom" android:clickable="true" android:focusable="true">
+                    <TextView android:id="@+id/tv_day2_temp_p7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="30°" android:textColor="#FFFFFF" android:textSize="10sp" android:layout_marginBottom="2dp"/>
+                    <TextView android:id="@+id/tv_day2_name_p7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="MON" android:textColor="#8E94A3" android:textSize="10sp" android:layout_marginBottom="5dp"/>
+                    <View android:id="@+id/bar2_p7" android:layout_width="20dp" android:layout_height="100dp" android:background="#8E94A3" />
+                </LinearLayout>
+                <!-- Day 3 -->
+                <LinearLayout android:id="@+id/day3_container_p7" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center|bottom" android:clickable="true" android:focusable="true">
+                    <TextView android:id="@+id/tv_day3_temp_p7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="30°" android:textColor="#FFFFFF" android:textSize="10sp" android:layout_marginBottom="2dp"/>
+                    <TextView android:id="@+id/tv_day3_name_p7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TUE" android:textColor="#8E94A3" android:textSize="10sp" android:layout_marginBottom="5dp"/>
+                    <View android:id="@+id/bar3_p7" android:layout_width="20dp" android:layout_height="120dp" android:background="#FF9F5A" />
+                </LinearLayout>
+                <!-- Day 4 -->
+                <LinearLayout android:id="@+id/day4_container_p7" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center|bottom" android:clickable="true" android:focusable="true">
+                    <TextView android:id="@+id/tv_day4_temp_p7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="30°" android:textColor="#FFFFFF" android:textSize="10sp" android:layout_marginBottom="2dp"/>
+                    <TextView android:id="@+id/tv_day4_name_p7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="WED" android:textColor="#8E94A3" android:textSize="10sp" android:layout_marginBottom="5dp"/>
+                    <View android:id="@+id/bar4_p7" android:layout_width="20dp" android:layout_height="140dp" android:background="#8E94A3" />
+                </LinearLayout>
+                <!-- Day 5 -->
+                <LinearLayout android:id="@+id/day5_container_p7" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center|bottom" android:clickable="true" android:focusable="true">
+                    <TextView android:id="@+id/tv_day5_temp_p7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="30°" android:textColor="#FFFFFF" android:textSize="10sp" android:layout_marginBottom="2dp"/>
+                    <TextView android:id="@+id/tv_day5_name_p7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="THU" android:textColor="#8E94A3" android:textSize="10sp" android:layout_marginBottom="5dp"/>
+                    <View android:id="@+id/bar5_p7" android:layout_width="20dp" android:layout_height="90dp" android:background="#8E94A3" />
+                </LinearLayout>
+                <!-- Day 6 -->
+                <LinearLayout android:id="@+id/day6_container_p7" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center|bottom" android:clickable="true" android:focusable="true">
+                    <TextView android:id="@+id/tv_day6_temp_p7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="30°" android:textColor="#FFFFFF" android:textSize="10sp" android:layout_marginBottom="2dp"/>
+                    <TextView android:id="@+id/tv_day6_name_p7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FRI" android:textColor="#8E94A3" android:textSize="10sp" android:layout_marginBottom="5dp"/>
+                    <View android:id="@+id/bar6_p7" android:layout_width="20dp" android:layout_height="110dp" android:background="#8E94A3" />
+                </LinearLayout>
+                <!-- Day 7 -->
+                <LinearLayout android:id="@+id/day7_container_p7" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center|bottom" android:clickable="true" android:focusable="true">
+                    <TextView android:id="@+id/tv_day7_temp_p7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="30°" android:textColor="#FFFFFF" android:textSize="10sp" android:layout_marginBottom="2dp"/>
+                    <TextView android:id="@+id/tv_day7_name_p7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SAT" android:textColor="#8E94A3" android:textSize="10sp" android:layout_marginBottom="5dp"/>
+                    <View android:id="@+id/bar7_p7" android:layout_width="20dp" android:layout_height="80dp" android:background="#8E94A3" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp">
+                <RelativeLayout
+                    android:id="@+id/btn_thunderstorm_p7"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@drawable/dashboard_item_bg"
+                    android:layout_marginBottom="15dp"
+                    android:padding="15dp">
+                    <TextView android:id="@+id/tv_date_row1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SUN\nSEP 12" android:textColor="#8E94A3" android:textSize="12sp"/>
+                    <ImageView android:id="@+id/iv_icon_row1" android:layout_width="40dp" android:layout_height="40dp" android:layout_centerInParent="true" android:src="@drawable/first" android:contentDescription="Icon"/>
+                    <TextView android:id="@+id/tv_temp_row1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="Thunderstorms\n33° / 28°" android:textColor="@color/white" android:gravity="end" android:textSize="14sp"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/btn_thunderstorm_p8"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@drawable/dashboard_item_bg"
+                    android:layout_marginBottom="15dp"
+                    android:padding="15dp">
+                    <TextView android:id="@+id/tv_date_row2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SUN\nSEP 13" android:textColor="#8E94A3" android:textSize="12sp"/>
+                    <ImageView android:id="@+id/iv_icon_row2" android:layout_width="40dp" android:layout_height="40dp" android:layout_centerInParent="true" android:src="@drawable/first" android:contentDescription="Icon"/>
+                    <TextView android:id="@+id/tv_temp_row2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="Thunderstorms\n33° / 30°" android:textColor="@color/white" android:gravity="end" android:textSize="14sp"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
